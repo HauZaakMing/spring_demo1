@@ -3,5 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id ="user" class="org.example.User"></bean>
+    <bean id ="UserDaoImpl" class="org.example.bean.UserDaoImpl"></bean>
+    <bean id ="PersonDaoImpl" class="org.example.bean.PersonDaoImpl"></bean>
 <!--    <bean id ="user1" class="org.example.User"></bean>-->
+
 </beans>
