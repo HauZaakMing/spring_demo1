@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--在实际使用的过程中要是需要使用到<,或者>，我们需要用到他们的转椅，如&lt; &gt;
+    或者采用CDATA区域<![CDATA[a < b]]>
+    要是想要用null值，在body里放null
+-->
+
+    <bean id="book" class="org.example.di.Book" >
+        <property name="author" value="小猪猪"></property>
+        <property name="name" value="&lt;小猪猪之书&gt;"></property>
+        <property name="otherString" >
+            <value><![CDATA[a < b]]></value>
+        </property>
+    </bean>
+    <bean id="book1" class="org.example.di.Book">
+        <constructor-arg name="author" value="bigSmart"></constructor-arg>
+        <constructor-arg name="name" value="bigSmart's book"></constructor-arg>
+    </bean>
+</beans>
