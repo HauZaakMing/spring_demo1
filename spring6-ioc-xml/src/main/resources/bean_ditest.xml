@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 外部bean应用进行对象赋值-->
+    <bean id="dept1" class="org.example.ditest.Department">
+        <property name="dname" value="小猪单位"></property>
+    </bean>
+    <bean id="emp1" class="org.example.ditest.Employee">
+        <property name="name" value="pig"></property>
+        <property name="age" value="15"></property>
+        <property name="dept" >
+            <ref bean="dept1"></ref>
+        </property>
+    </bean>
+
+
+    <!--内部bean进行对象赋值-->
+    <bean id="emp2" class="org.example.ditest.Employee">
+        <property name="name" value="棒棒小猪"></property>
+        <property name="age" value="5"></property>
+        <property name="dept">
+            <bean id="dept2" class="org.example.ditest.Department">
+                <property name="dname" value="超级棒棒部门"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!--级联幅值-->
+    <bean id="dept3" class="org.example.ditest.Department">
+        <property name="dname" value="摸鱼部门"></property>
+    </bean>
+    <!--内部通过对象属性进行修改-->
+    <bean id="emp3" class="org.example.ditest.Employee">
+        <property name="name" value="摸鱼臭小猪"></property>
+        <property name="age" value="3"></property>
+        <property name="dept" ref="dept3"></property>
+        <property name="dept.dname" value="moyuDept"></property>
+    </bean>
+
+</beans>
