@@ -10,7 +10,7 @@ public class TestJDBC {
     @Test
     public void demo1(){
         DruidDataSource datasource = new DruidDataSource();
-        ApplicationContext context = new ClassPathXmlApplicationContext("dean_jdbc.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("bean_jdbc.xml");
         DruidDataSource bean = context.getBean(DruidDataSource.class);
         datasource.setUrl(bean.getUrl());
         datasource.setUsername(bean.getUsername());
