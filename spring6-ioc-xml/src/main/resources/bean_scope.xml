@@ -3,12 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!--如果设定为prototype，每次按ID获取bean，bean都不是同一个-->
-    <bean id="emp" class="org.example.ditest.Employee" scope="prototype">
+    <!--在实践中证明关闭context，会让singelton的bean执行destroy方法却不会让prototype的bean执行-->
+    <bean id="myBeanPost" class="org.example.ditest.MyBeanPost"></bean>
+    <bean id="emp" class="org.example.ditest.Employee" scope="prototype" init-method="initmethod" destroy-method="destroyMethod">
         <property name="name" value="robot xiaozhu"></property>
     </bean>
     <!--当设定为单实例，application context初始化的时候就会对其进行创建-->
-    <bean id="emp1" class="org.example.ditest.Employee" scope="singleton">
+    <bean id="emp1" class="org.example.ditest.Employee" scope="singleton" destroy-method="destroyMethod">
         <property name="name" value="xiaozhu"></property>
+        <property name="age" value="1"></property>
+
     </bean>
 
 </beans>

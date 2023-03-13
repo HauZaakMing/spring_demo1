@@ -13,7 +13,22 @@ public class Employee {
     public Employee() {
         System.out.println("开始创建机器人小猪");
     }
-//    @Override
+
+    public Employee(Department dept, String name) {
+        System.out.println("有参构造，启动！");
+        this.dept = dept;
+        this.name = name;
+    }
+
+    public void initmethod(){
+        System.out.println("调用初始化方法");
+    }
+
+    public void destroyMethod(){
+        System.out.println(this.name+"被干掉了");
+    }
+
+    //    @Override
 //    public String toString() {
 //        return "Employee{" +
 //                "dept=" + dept +
@@ -58,7 +73,7 @@ public class Employee {
     }
 
     public void work(){
-        System.out.println(name+"今年"+age+"岁，"+"开始工作");
+        System.out.println(name+"今年"+age+"岁，"+"开始工作"+"=================");
     }
 
     public void show(){

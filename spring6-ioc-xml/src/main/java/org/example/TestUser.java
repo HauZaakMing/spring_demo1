@@ -12,13 +12,14 @@ public class TestUser {
     private Logger logger = LoggerFactory.getLogger(TestUser.class);
     public static void main(String[] args) {
 
-        ApplicationContext context = new ClassPathXmlApplicationContext("bean_scope.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("bean_scope.xml");
         System.out.println("hello, piggy!");
         Employee emp = (Employee) context.getBean("emp");
         Employee emp1 = (Employee) context.getBean("emp");
 
         System.out.println("emp1 = " + emp1);
         System.out.println("emp = " + emp);
+        context.close();
 
 
 //        System.out.println("根據ID获取bean："+user);

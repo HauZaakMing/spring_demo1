@@ -3,10 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- 外部bean应用进行对象赋值-->
+
+
     <bean id="dept1" class="org.example.ditest.Department">
         <property name="dname" value="小猪单位"></property>
     </bean>
-    <bean id="emp1" class="org.example.ditest.Employee">
+    <bean id="emp1" class="org.example.ditest.Employee" init-method="inimethod">
         <property name="name" value="pig"></property>
         <property name="age" value="15"></property>
         <property name="dept" >
@@ -31,7 +33,7 @@
         <property name="dname" value="摸鱼部门"></property>
     </bean>
     <!--内部通过对象属性进行修改-->
-    <bean id="emp3" class="org.example.ditest.Employee">
+    <bean id="emp3" class="org.example.ditest.Employee" >
         <property name="name" value="摸鱼臭小猪"></property>
         <property name="age" value="3"></property>
         <property name="dept" ref="dept3"></property>
