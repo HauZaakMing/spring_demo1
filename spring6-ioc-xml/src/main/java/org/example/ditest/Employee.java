@@ -1,10 +1,37 @@
 package org.example.ditest;
 
+import java.util.Arrays;
+
 public class Employee {
 
     private Department dept;
     private String name;
     private int age;
+
+    private String[] hobby;
+
+    public Employee() {
+        System.out.println("开始创建机器人小猪");
+    }
+//    @Override
+//    public String toString() {
+//        return "Employee{" +
+//                "dept=" + dept +
+//                ", name='" + name + '\'' +
+//                ", age=" + age +
+//                ", hobby=" + Arrays.toString(hobby) +
+//                '}';
+//    }
+
+
+
+    public String[] getHobby() {
+        return hobby;
+    }
+
+    public void setHobby(String[] hobby) {
+        this.hobby = hobby;
+    }
 
     public void setDept(Department dept) {
         this.dept = dept;

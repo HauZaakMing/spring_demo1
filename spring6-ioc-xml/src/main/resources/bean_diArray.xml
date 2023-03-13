@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dept" class="org.example.ditest.Department">
+        <property name="dname" value="little pig park"></property>
+    </bean>
+
+    <bean id="emp" class="org.example.ditest.Employee">
+        <property name="name" value="little pig"></property>
+        <property name="age" value="1"></property>
+        <property name="dept" ref="dept"></property>
+        <property name="hobby">
+            <array>
+                <value>飞行</value>
+                <value>射击</value>
+                <value>睡觉</value>
+            </array>
+        </property>
+
+    </bean>
+</beans>
