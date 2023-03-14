@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring6-ioc-Annotation" />
         <module name="spring_first" />
+        <module name="spring6-ioc-Annotation" />
         <module name="spring6-ioc-xml" />
+        <module name="spring6-ioc-selfbuild" />
       </profile>
     </annotationProcessing>
   </component>

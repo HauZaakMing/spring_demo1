@@ -12,6 +12,7 @@
         <module>spring_first</module>
         <module>spring6-ioc-xml</module>
         <module>spring6-ioc-Annotation</module>
+        <module>spring6-ioc-selfbuild</module>
     </modules>
 
     <properties>
