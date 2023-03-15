@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_first" />
+        <module name="spring6-jdbc-tx" />
         <module name="spring6-ioc-Annotation" />
         <module name="spring6-ioc-xml" />
         <module name="spring6-ioc-selfbuild" />

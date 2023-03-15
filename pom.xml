@@ -13,6 +13,7 @@
         <module>spring6-ioc-xml</module>
         <module>spring6-ioc-Annotation</module>
         <module>spring6-ioc-selfbuild</module>
+        <module>spring6-jdbc-tx</module>
     </modules>
 
     <properties>
@@ -28,13 +29,32 @@
         <artifactId>spring-context</artifactId>
         <version>6.0.2</version>
     </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>5.3.22</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aop</artifactId>
+        <version>6.0.2</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-aspects</artifactId>
+        <version>6.0.2</version>
+    </dependency>
 
     <!--junit5测试-->
     <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
-        <version>5.3.1</version>
+        <version>5.9.0</version>
     </dependency>
+
+
 
     <dependency>
         <groupId>org.apache.logging.log4j</groupId>
@@ -64,6 +84,15 @@
         <artifactId>jakarta.annotation-api</artifactId>
         <version>2.1.1</version>
     </dependency>
+        <!--spring jdbc  Spring 持久化层支持jar包-->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>6.0.2</version>
+    </dependency>
+
+
+
     </dependencies>
 
 </project>
